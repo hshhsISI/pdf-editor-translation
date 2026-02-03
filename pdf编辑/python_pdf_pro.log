@@ -1,0 +1,60 @@
+2026-02-02 23:02:04,670 - WARNING - 缺少依赖: PyMuPDF (fitz), PyPDF2, pdfplumber, reportlab, Pillow, python-docx, openpyxl, tqdm
+2026-02-02 23:02:04,670 - INFO - 安装命令示例: D:\1A-ruanjian\Python3.11.9\python.exe -m pip install PyMuPDF PyPDF2 pdfplumber reportlab Pillow python-docx openpyxl tqdm
+2026-02-02 23:02:04,671 - WARNING - 存在缺失依赖，参照提示安装后重试
+2026-02-03 11:49:06,517 - INFO - 依赖检查通过: 所有主要依赖已安装
+2026-02-03 11:49:23,499 - INFO - 依赖检查通过: 所有主要依赖已安装
+2026-02-03 11:51:14,222 - INFO - 开始合并 2 个 PDF -> merged.pdf
+2026-02-03 11:51:14,323 - INFO - 合并完成：merged.pdf
+2026-02-03 11:51:26,812 - INFO - 开始提取文本: merged.pdf
+2026-02-03 11:51:26,825 - INFO - 已保存文本到: merged.txt
+2026-02-03 11:51:49,537 - INFO - 第 1 页，发现图片 0 个
+2026-02-03 11:51:49,537 - INFO - 第 2 页，发现图片 0 个
+2026-02-03 11:51:49,538 - INFO - 第 3 页，发现图片 1 个
+2026-02-03 11:51:49,539 - ERROR - 提取图片失败: 'Pixmap' object has no attribute 'get_image_data'
+Traceback (most recent call last):
+  File "d:\Python代码\111\PythonPDFPro.py", line 322, in extract_images
+    img_data = pix.get_image_data(output='png')
+               ^^^^^^^^^^^^^^^^^^
+AttributeError: 'Pixmap' object has no attribute 'get_image_data'
+2026-02-03 11:52:35,603 - INFO - 第 1 页，发现图片 0 个
+2026-02-03 11:52:35,603 - INFO - 第 2 页，发现图片 0 个
+2026-02-03 11:52:35,604 - INFO - 第 3 页，发现图片 1 个
+2026-02-03 11:52:35,605 - INFO - 图片提取完成，共保存 1 个文件
+2026-02-03 11:53:35,202 - INFO - 加密完成：merged_enc.pdf
+2026-02-03 11:54:15,682 - INFO - 解密并生成：merged_dec.pdf
+2026-02-03 11:54:31,617 - INFO - 开始提取文本: merged_dec.pdf
+2026-02-03 11:54:31,623 - INFO - 已保存文本到: merged_dec.txt
+2026-02-03 11:56:05,766 - ERROR - 解密失败: File has not been decrypted
+Traceback (most recent call last):
+  File "d:\Python代码\111\PythonPDFPro.py", line 383, in decrypt_pdf
+    for page in reader.pages:
+  File "D:\Python代码\111\.venv\Lib\site-packages\PyPDF2\_page.py", line 2081, in __iter__
+    for i in range(len(self)):
+                   ^^^^^^^^^
+  File "D:\Python代码\111\.venv\Lib\site-packages\PyPDF2\_page.py", line 2063, in __len__
+    return self.length_function()
+           ^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Python代码\111\.venv\Lib\site-packages\PyPDF2\_reader.py", line 445, in _get_num_pages
+    return self.trailer[TK.ROOT]["/Pages"]["/Count"]  # type: ignore
+           ~~~~~~~~~~~~^^^^^^^^^
+  File "D:\Python代码\111\.venv\Lib\site-packages\PyPDF2\generic\_data_structures.py", line 266, in __getitem__
+    return dict.__getitem__(self, key).get_object()
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Python代码\111\.venv\Lib\site-packages\PyPDF2\generic\_base.py", line 259, in get_object
+    obj = self.pdf.get_object(self)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Python代码\111\.venv\Lib\site-packages\PyPDF2\_reader.py", line 1266, in get_object
+    raise FileNotDecryptedError("File has not been decrypted")
+PyPDF2.errors.FileNotDecryptedError: File has not been decrypted
+2026-02-03 11:56:36,703 - ERROR - 密码错误或无法解密（请确认密码正确）
+2026-02-03 11:58:45,266 - INFO - 开始合并 2 个 PDF -> merged.pdf
+2026-02-03 11:58:45,299 - INFO - 合并完成：merged.pdf
+2026-02-03 11:58:45,989 - INFO - 开始提取文本: merged.pdf
+2026-02-03 11:58:45,995 - INFO - 已保存文本到: merged.txt
+2026-02-03 11:58:46,653 - INFO - 第 1 页，发现图片 0 个
+2026-02-03 11:58:46,654 - INFO - 第 2 页，发现图片 0 个
+2026-02-03 11:58:46,654 - INFO - 第 3 页，发现图片 1 个
+2026-02-03 11:58:46,656 - INFO - 图片提取完成，共保存 1 个文件
+2026-02-03 11:58:47,320 - INFO - 加密完成：merged_enc.pdf
+2026-02-03 11:58:47,976 - INFO - 解密并生成：merged_dec.pdf
+2026-02-03 11:58:48,617 - ERROR - 密码错误或无法解密（请确认密码正确）

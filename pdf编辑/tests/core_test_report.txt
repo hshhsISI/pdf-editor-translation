@@ -1,0 +1,6 @@
+merge: PASS (returncode=0)
+extract_text: PASS (returncode=0)
+extract_images: PASS (returncode=0)
+encrypt: PASS (returncode=0)
+decrypt_correct: PASS (returncode=0)
+decrypt_incorrect: PASS (returncode=0)

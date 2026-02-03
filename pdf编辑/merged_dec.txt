@@ -1,0 +1,5 @@
+This is PDF A - page 1
+
+This is PDF A - page 2
+
+This is PDF B - contains an image
